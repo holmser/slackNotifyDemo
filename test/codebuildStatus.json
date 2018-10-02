@@ -1,0 +1,102 @@
+{
+    "version": "0",
+    "id": "60bac2c4-b974-5797-23c5-593b3ab9bce6",
+    "detail-type": "CodeBuild Build State Change",
+    "source": "aws.codebuild",
+    "account": "487312177614",
+    "time": "2018-10-02T03:46:48Z",
+    "region": "us-east-1",
+    "resources": [
+      "arn:aws:codebuild:us-east-1:487312177614:build/KennyLogGen:fc983df0-d62a-4504-9ac7-29796c18892f"
+    ],
+    "detail": {
+      "build-status": "FAILED",
+      "project-name": "KennyLogGen",
+      "build-id": "arn:aws:codebuild:us-east-1:487312177614:build/KennyLogGen:fc983df0-d62a-4504-9ac7-29796c18892f",
+      "additional-information": {
+        "artifact": {
+          "location": "arn:aws:s3:::chlmes.pipeline/klog/klog.zip"
+        },
+        "environment": {
+          "image": "aws/codebuild/golang:1.10",
+          "privileged-mode": false,
+          "compute-type": "BUILD_GENERAL1_SMALL",
+          "type": "LINUX_CONTAINER",
+          "environment-variables": []
+        },
+        "timeout-in-minutes": 60.0,
+        "build-complete": true,
+        "initiator": "admin",
+        "build-start-time": "Oct 2, 2018 3:46:06 AM",
+        "source": {
+          "auth": {
+            "type": "OAUTH"
+          },
+          "location": "https://github.com/holmser/KennyLogGens",
+          "type": "GITHUB"
+        },
+        "logs": {
+          "group-name": "/aws/codebuild/KennyLogGen",
+          "stream-name": "fc983df0-d62a-4504-9ac7-29796c18892f",
+          "deep-link": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logEvent:group=/aws/codebuild/KennyLogGen;stream=fc983df0-d62a-4504-9ac7-29796c18892f"
+        },
+        "phases": [
+          {
+            "phase-context": [],
+            "start-time": "Oct 2, 2018 3:46:06 AM",
+            "end-time": "Oct 2, 2018 3:46:07 AM",
+            "duration-in-seconds": 0.0,
+            "phase-type": "SUBMITTED",
+            "phase-status": "SUCCEEDED"
+          },
+          {
+            "phase-context": [
+              ": "
+            ],
+            "start-time": "Oct 2, 2018 3:46:07 AM",
+            "end-time": "Oct 2, 2018 3:46:28 AM",
+            "duration-in-seconds": 21.0,
+            "phase-type": "PROVISIONING",
+            "phase-status": "SUCCEEDED"
+          },
+          {
+            "phase-context": [
+              ": "
+            ],
+            "start-time": "Oct 2, 2018 3:46:28 AM",
+            "end-time": "Oct 2, 2018 3:46:29 AM",
+            "duration-in-seconds": 0.0,
+            "phase-type": "DOWNLOAD_SOURCE",
+            "phase-status": "SUCCEEDED"
+          },
+          {
+            "phase-context": [
+              "COMMAND_EXECUTION_ERROR: Error while executing command: go get -u github.com/golang/lint/golint. Reason: exit status 1"
+            ],
+            "start-time": "Oct 2, 2018 3:46:29 AM",
+            "end-time": "Oct 2, 2018 3:46:37 AM",
+            "duration-in-seconds": 8.0,
+            "phase-type": "INSTALL",
+            "phase-status": "FAILED"
+          },
+          {
+            "phase-context": [
+              ": "
+            ],
+            "start-time": "Oct 2, 2018 3:46:37 AM",
+            "end-time": "Oct 2, 2018 3:46:39 AM",
+            "duration-in-seconds": 2.0,
+            "phase-type": "FINALIZING",
+            "phase-status": "SUCCEEDED"
+          },
+          {
+            "start-time": "Oct 2, 2018 3:46:39 AM",
+            "phase-type": "COMPLETED"
+          }
+        ]
+      },
+      "current-phase": "COMPLETED",
+      "current-phase-context": "[: ]",
+      "version": "1"
+    }
+  }

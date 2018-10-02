@@ -1,0 +1,118 @@
+{
+    "resource": "/callback",
+    "path": "/callback",
+    "httpMethod": "POST",
+    "headers": {
+      "Accept": "application/json,*/*",
+      "Accept-Encoding": "gzip,deflate",
+      "CloudFront-Forwarded-Proto": "https",
+      "CloudFront-Is-Desktop-Viewer": "true",
+      "CloudFront-Is-Mobile-Viewer": "false",
+      "CloudFront-Is-SmartTV-Viewer": "false",
+      "CloudFront-Is-Tablet-Viewer": "false",
+      "CloudFront-Viewer-Country": "US",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Host": "44aqo41pj3.execute-api.us-east-1.amazonaws.com",
+      "User-Agent": "Slackbot 1.0 (+https://api.slack.com/robots)",
+      "Via": "1.1 995357b35cef56ea5d31bd9fddec6ce9.cloudfront.net (CloudFront)",
+      "X-Amz-Cf-Id": "-X-Y1mA5qkR6mxTuovLsOE5GLoH3POkNqvawXAqZqT6xbubOD1mrmw==",
+      "X-Amzn-Trace-Id": "Root=1-5bb0657f-0731b7c58a3f568e87c8b8fa",
+      "X-Forwarded-For": "34.228.6.255, 54.239.145.60",
+      "X-Forwarded-Port": "443",
+      "X-Forwarded-Proto": "https",
+      "X-Slack-Request-Timestamp": "1538286975",
+      "X-Slack-Signature": "v0=a8d7e89406f74c3b13f1ee794312f69369ff65badf6f7ec4bfdc42cb2ba25a2f"
+    },
+    "multiValueHeaders": {
+      "Accept": [
+        "application/json,*/*"
+      ],
+      "Accept-Encoding": [
+        "gzip,deflate"
+      ],
+      "CloudFront-Forwarded-Proto": [
+        "https"
+      ],
+      "CloudFront-Is-Desktop-Viewer": [
+        "true"
+      ],
+      "CloudFront-Is-Mobile-Viewer": [
+        "false"
+      ],
+      "CloudFront-Is-SmartTV-Viewer": [
+        "false"
+      ],
+      "CloudFront-Is-Tablet-Viewer": [
+        "false"
+      ],
+      "CloudFront-Viewer-Country": [
+        "US"
+      ],
+      "Content-Type": [
+        "application/x-www-form-urlencoded"
+      ],
+      "Host": [
+        "44aqo41pj3.execute-api.us-east-1.amazonaws.com"
+      ],
+      "User-Agent": [
+        "Slackbot 1.0 (+https://api.slack.com/robots)"
+      ],
+      "Via": [
+        "1.1 995357b35cef56ea5d31bd9fddec6ce9.cloudfront.net (CloudFront)"
+      ],
+      "X-Amz-Cf-Id": [
+        "-X-Y1mA5qkR6mxTuovLsOE5GLoH3POkNqvawXAqZqT6xbubOD1mrmw=="
+      ],
+      "X-Amzn-Trace-Id": [
+        "Root=1-5bb0657f-0731b7c58a3f568e87c8b8fa"
+      ],
+      "X-Forwarded-For": [
+        "34.228.6.255, 54.239.145.60"
+      ],
+      "X-Forwarded-Port": [
+        "443"
+      ],
+      "X-Forwarded-Proto": [
+        "https"
+      ],
+      "X-Slack-Request-Timestamp": [
+        "1538286975"
+      ],
+      "X-Slack-Signature": [
+        "v0=a8d7e89406f74c3b13f1ee794312f69369ff65badf6f7ec4bfdc42cb2ba25a2f"
+      ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+      "resourceId": "bem0fg",
+      "resourcePath": "/callback",
+      "httpMethod": "POST",
+      "extendedRequestId": "OBTL-Fp1oAMF8bQ=",
+      "requestTime": "30/Sep/2018:05:56:15 +0000",
+      "path": "/dev/callback",
+      "accountId": "487312177614",
+      "protocol": "HTTP/1.1",
+      "stage": "dev",
+      "requestTimeEpoch": 1538286975874,
+      "requestId": "8b19c662-c475-11e8-ab19-8d1a16fc2072",
+      "identity": {
+        "cognitoIdentityPoolId": null,
+        "accountId": null,
+        "cognitoIdentityId": null,
+        "caller": null,
+        "sourceIp": "34.228.6.255",
+        "accessKey": null,
+        "cognitoAuthenticationType": null,
+        "cognitoAuthenticationProvider": null,
+        "userArn": null,
+        "userAgent": "Slackbot 1.0 (+https://api.slack.com/robots)",
+        "user": null
+      },
+      "apiId": "44aqo41pj3"
+    },
+    "body": "payload=%7B%22type%22%3A%22interactive_message%22%2C%22actions%22%3A%5B%7B%22name%22%3A%22deployment%22%2C%22type%22%3A%22button%22%2C%22value%22%3A%22%7B%5C%22approve%5C%22%3A+true%2C+%5C%22codePipelineToken%5C%22%3A+%5C%227eb59ed6-54b4-4dd0-abe8-6574598c738b%5C%22%2C+%5C%22codePipelineName%5C%22%3A+%5C%22sm-demo%5C%22%2C+%5C%22action%5C%22%3A+%5C%22notifySlack%5C%22%7D%22%7D%5D%2C%22callback_id%22%3A%22wopr_game%22%2C%22team%22%3A%7B%22id%22%3A%22T9XM55LP4%22%2C%22domain%22%3A%22bigmonkeycucumberpie%22%7D%2C%22channel%22%3A%7B%22id%22%3A%22C9Z76Q2PR%22%2C%22name%22%3A%22botcity%22%7D%2C%22user%22%3A%7B%22id%22%3A%22U9YGWEPAA%22%2C%22name%22%3A%22chris%22%7D%2C%22action_ts%22%3A%221538286975.808510%22%2C%22message_ts%22%3A%221538286825.000100%22%2C%22attachment_id%22%3A%221%22%2C%22token%22%3A%22ODiZ3pO1gb5VxOzisd5uW5JT%22%2C%22is_app_unfurl%22%3Afalse%2C%22original_message%22%3A%7B%22text%22%3A%22Would+you+like+to+promote+the+build+to+production%3F%22%2C%22bot_id%22%3A%22BD4P1ED62%22%2C%22attachments%22%3A%5B%7B%22callback_id%22%3A%22wopr_game%22%2C%22fallback%22%3A%22You+are+unable+to+promote+a+build%22%2C%22text%22%3A%22Yes+to+deploy+your+build+to+production%22%2C%22id%22%3A1%2C%22color%22%3A%223AA3E3%22%2C%22actions%22%3A%5B%7B%22id%22%3A%221%22%2C%22name%22%3A%22deployment%22%2C%22text%22%3A%22Yes%22%2C%22type%22%3A%22button%22%2C%22value%22%3A%22%7B%5C%22approve%5C%22%3A+true%2C+%5C%22codePipelineToken%5C%22%3A+%5C%227eb59ed6-54b4-4dd0-abe8-6574598c738b%5C%22%2C+%5C%22codePipelineName%5C%22%3A+%5C%22sm-demo%5C%22%2C+%5C%22action%5C%22%3A+%5C%22notifySlack%5C%22%7D%22%2C%22style%22%3A%22danger%22%2C%22confirm%22%3A%7B%22text%22%3A%22This+will+deploy+the+build+to+production%22%2C%22title%22%3A%22Are+you+sure%3F%22%2C%22ok_text%22%3A%22Yes%22%2C%22dismiss_text%22%3A%22No%22%7D%7D%2C%7B%22id%22%3A%222%22%2C%22name%22%3A%22deployment%22%2C%22text%22%3A%22No%22%2C%22type%22%3A%22button%22%2C%22value%22%3A%22%7B%5C%22approve%5C%22%3A+false%2C+%5C%22codePipelineToken%5C%22%3A+%5C%227eb59ed6-54b4-4dd0-abe8-6574598c738b%5C%22%2C+%5C%22codePipelineName%5C%22%3A+%5C%22sm-demo%5C%22%2C+%5C%22action%5C%22%3A+%5C%22notifySlack%5C%22%7D%22%2C%22style%22%3A%22%22%7D%5D%7D%5D%2C%22type%22%3A%22message%22%2C%22subtype%22%3A%22bot_message%22%2C%22ts%22%3A%221538286825.000100%22%7D%2C%22response_url%22%3A%22https%3A%5C%2F%5C%2Fhooks.slack.com%5C%2Factions%5C%2FT9XM55LP4%5C%2F445879566483%5C%2F6OiwEFhQQ7bolTrdlGc0uMg5%22%2C%22trigger_id%22%3A%22447031616023.337719190786.e66c60c3c020bd2773a9b0845eb61050%22%7D",
+    "isBase64Encoded": false
+  }

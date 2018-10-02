@@ -16,6 +16,11 @@ provider:
       Action:
       - KMS:Decrypt
       Resource: ${self:custom.kmsSecrets.keyArn} 
+    - Effect: Allow
+      Action: 
+        - secretsmanager:GetSecretValue
+      Resource: arn:aws:secretsmanager:us-east-1:487312177614:secret:SlackSigningSecret-QByVib
+
 custom:
   serverless-kms-secrets:
       secretsFile: kms-secrets.${opt:stage, self:provider.stage}.${opt:region, self:provider.region}.yml (optional)
@@ -29,15 +34,21 @@ functions:
       - http:
           path: callback
           method: post
-    environment:
-      SLACK_SIGNING_SECRET: ${self:custom.kmsSecrets.secrets.SLACK_SIGNING_SECRET}
-      # SLACK_VERIFICATION_TOKEN: ODiZ3pO1gb5VxOzisd5uW5JT
-      # SLACK_SIGNING_SECRET: 71250963715074d9fabfc3d746b03d9d
 
   approval:
     handler: approval.lambda_handler
     events:
+    # Using a name will create a new SNS topic
       - sns: slackbot
     environment:
       SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
       SLACK_CHANNEL: botcity
+  
+  # Update Commit status using API calls (In Progress)
+  commitStatus:
+    handler: commitStatus.lambda_handler
+    events:
+      - cloudwatchEvent:
+          event:
+            source:
+              - aws.codebuild
